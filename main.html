@@ -1,0 +1,96 @@
+<!doctype html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+    border: 1px inset rgb(140, 224, 13)
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px inset rgb(140, 224, 13)
+}
+</style>
+
+<head>
+    <title>Прогноз показателя "Соотношение матрица-наполнитель"</title>
+</head>
+
+<form action="{{url_for('main')}}" method="POST">
+    <fieldset>
+        <legend>Введите значение</legend>
+        Потребление смолы, г/м2
+        <input name = "Потребление смолы, г/м2"
+        required>
+        <br>
+        <br>
+        Плотность, кг/м3
+        <input name = "Плотность, кг/м3"
+        required>
+        <br>
+        <br>
+        Модуль упругости, ГПа
+        <input name = "модуль упругости, ГПа"
+        required>
+        <br>
+        <br>
+        Количество отвердителя, м.%
+        <input name = "Количество отвердителя, м.%"
+        required>
+        <br>
+        <br>
+        Содержание эпоксидных групп,%_2
+        <input name = "Содержание эпоксидных групп,%_2"
+        required>
+        <br>
+        <br>
+        Температура вспышки, С_2
+        <input name = "Температура вспышки, С_2"
+        required>
+        <br>
+        <br>
+        Поверхностная плотность, г/м2
+        <input name = "Поверхностная плотность, г/м2"
+        required>
+        <br>
+        <br>
+        Модуль упругости при растяжении, ГПа
+        <input name = "Модуль упругости при растяжении, ГПа"
+        required>
+        <br>
+        <br>
+        Прочность при растяжении, МПа
+        <input name = "Прочность при растяжении, МПа"
+        required>
+        <br>
+        <br>
+        Угол нашивки, град
+        <input name = "Угол нашивки, град"
+        required>
+        <br>
+        <br>
+        Шаг нашивки
+        <input name = "Шаг нашивки"
+        required>
+        <br>
+        <br>
+        Плотность нашивки
+        <input name = "Плотность нашивки"
+        required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+
+</form>
+
+<div class="result" align="left">
+    {% if result %}
+       <br>
+       <p style="font-size:50px">
+       Прогнозируемый показатель "Соотношение матрица-наполнитель"
+       </p>
+       <p style="font-size:50px"> {{result}}</p>
+    {% endif %}
+</div>
